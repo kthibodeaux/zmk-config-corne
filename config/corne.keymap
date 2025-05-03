@@ -186,7 +186,7 @@
             bindings = <
 &kp DELETE  &kp Q  &kp W  &kp F     &kp P               &kp G        &kp J    &kp L               &kp U         &kp Y    &kp SEMICOLON  &kp BACKSPACE
 &kp ESCAPE  &kp A  &kp R  &kp S     &hm LEFT_CONTROL T  &kp D        &kp H    &hm LEFT_CONTROL N  &kp E         &kp I    &kp O          &kp SQT
-&kp LCTRL   &kp Z  &kp X  &kp C     &kp V               &kp B        &kp K    &kp M               &kp COMMA     &kp DOT  &kp FSLH       &kp RSHFT
+&mo 3       &kp Z  &kp X  &kp C     &kp V               &kp B        &kp K    &kp M               &kp COMMA     &kp DOT  &kp FSLH       &kp RSHFT
                           &kp LGUI  &mo 1               &kp SPACE    &kp RET  &lt 2 TAB           &kp LEFT_ALT
             >;
         };
@@ -225,7 +225,7 @@
             >;
         };
 
-        ADJ {
+        SYS {
             display-name = "System";
             bindings = <
 &trans  &kp F1        &kp F2        &kp F3        &kp F4      &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10      &trans
