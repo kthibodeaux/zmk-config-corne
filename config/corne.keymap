@@ -41,12 +41,6 @@
         DEF {
             display-name = "Base";
 
-            // -----------------------------------------------------------------------------------------
-            // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
-            // |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
-            // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
-            // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
-
             bindings = <
 &kp DELETE  &kp Q             &kp W           &kp F  &kp P               &kp G            &kp J    &kp L               &kp U      &kp Y            &kp SEMICOLON      &kp BACKSLASH
 &kp ESCAPE  &hm LEFT_SHIFT A  &hm LEFT_GUI R  &kp S  &hm LEFT_CONTROL T  &kp D            &kp H    &hm LEFT_CONTROL N  &kp E      &hm RIGHT_GUI I  &hm RIGHT_SHIFT O  &trans
