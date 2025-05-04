@@ -23,151 +23,17 @@
             global-quick-tap;
         };
 
-        para: para {
+        my_space: my_space {
             compatible = "zmk,behavior-tap-dance";
-            label = "PARA";
+            label = "MY_SPACE";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
-        };
+            bindings = <&kp SPACE>, <&kp UNDER>;
 
-        caps: caps {
-            compatible = "zmk,behavior-caps-word";
-            label = "CAPS";
-            #binding-cells = <0>;
-            continue-list = <MINUS BACKSPACE>;
-        };
-
-        paraless: paraless {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PARALESS";
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        paragreat: paragreat {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PARAGREAT";
-            bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            tapping-term-ms = <100>;
         };
     };
 
-    macros {
-        browsertab: browsertab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp TAB>,
-                <&macro_release>,
-                <&kp LCTRL>;
-        };
-    };
-
-    combos {
-        compatible = "zmk,combos";
-
-        escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <13 29>;
-        };
-
-        delete {
-            bindings = <&kp DELETE>;
-            key-positions = <15 21>;
-        };
-
-        perc {
-            bindings = <&kp PERCENT>;
-            key-positions = <5 17>;
-        };
-
-        equal {
-            bindings = <&kp EQUAL>;
-            key-positions = <28 16>;
-        };
-
-        dollar {
-            bindings = <&kp DOLLAR>;
-            key-positions = <4 16>;
-        };
-
-        pound {
-            bindings = <&kp POUND>;
-            key-positions = <3 15>;
-        };
-
-        at {
-            bindings = <&kp AT>;
-            key-positions = <2 14>;
-        };
-
-        backslash {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <26 14>;
-        };
-
-        copy {
-            bindings = <&kp K_COPY>;
-            key-positions = <28 27>;
-        };
-
-        paste {
-            bindings = <&kp K_PASTE>;
-            key-positions = <26 27>;
-        };
-
-        star {
-            bindings = <&kp STAR>;
-            key-positions = <8 20>;
-        };
-
-        slash {
-            bindings = <&kp SLASH>;
-            key-positions = <32 20>;
-        };
-
-        plus {
-            bindings = <&kp PLUS>;
-            key-positions = <7 19>;
-        };
-
-        minus {
-            bindings = <&kp KP_MINUS>;
-            key-positions = <31 19>;
-        };
-
-        underscore {
-            bindings = <&kp UNDER>;
-            key-positions = <30 18>;
-        };
-
-        leftbrack {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <31 32>;
-        };
-
-        rightbrack {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <33 32>;
-        };
-
-        para-less {
-            bindings = <&paraless>;
-            key-positions = <20 19>;
-        };
-
-        para-great {
-            bindings = <&paragreat>;
-            key-positions = <20 21>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     //
 
@@ -187,7 +53,7 @@
 &kp DELETE  &kp Q             &kp W           &kp F  &kp P               &kp G            &kp J    &kp L               &kp U      &kp Y            &kp SEMICOLON      &kp BACKSLASH
 &kp ESCAPE  &hm LEFT_SHIFT A  &hm LEFT_GUI R  &kp S  &hm LEFT_CONTROL T  &kp D            &kp H    &hm LEFT_CONTROL N  &kp E      &hm RIGHT_GUI R  &hm RIGHT_SHIFT O  &trans
 &mo 3       &kp Z             &kp X           &kp C  &kp V               &kp B            &kp K    &kp M               &kp COMMA  &kp DOT          &kp FSLH           &trans
-                                              &mo 1  &kp SPACE           &kp BACKSPACE    &kp TAB  &kp ENTER           &mo 2
+                                              &mo 1  &my_space           &kp BACKSPACE    &kp TAB  &kp ENTER           &mo 2
             >;
         };
 
