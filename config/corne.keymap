@@ -5,8 +5,7 @@
 #define DEF 0
 #define NAV 1
 #define SYM 2
-#define ADJ 3
-#define EXTRA 4
+#define SYS 3
 
 / {
     behaviors {
@@ -39,7 +38,7 @@
         compatible = "zmk,keymap";
 
         DEF {
-            display-name = "Base";
+            display-name = "base";
 
             bindings = <
 &kp DELETE  &kp Q             &kp W           &kp F  &kp P               &kp G            &kp J    &kp L               &kp U      &kp Y            &kp SEMICOLON      &kp BACKSLASH
@@ -50,7 +49,7 @@
         };
 
         NAV {
-            display-name = "NavNum";
+            display-name = "num";
             bindings = <
 &trans  &kp LG(NUMBER_1)      &kp LG(N2)            &kp LG(N3)            &kp LG(N4)            &kp LG(N5)        &kp LG(N6)            &kp LG(N7)            &kp LG(N8)            &kp LG(N9)            &kp LG(N0)            &trans
 &trans  &kp N1                &kp N2                &kp N3                &kp N4                &kp N5            &kp N6                &kp N7                &kp N8                &kp N9                &kp N0                &trans
@@ -60,7 +59,7 @@
         };
 
         SYM {
-            display-name = "Symbols";
+            display-name = "sym";
             bindings = <
 &trans  &trans         &kp TILDE    &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp DOLLAR         &kp EXCL  &kp AMPS          &kp ASTRK          &kp LEFT_PARENTHESIS  &kp RPAR  &kp K_MUTE
 &trans  &kp AMPERSAND  &kp PIPE     &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp GRAVE          &trans    &kp COLON         &kp AT             &kp MINUS             &kp HASH  &kp C_VOLUME_UP
@@ -70,22 +69,12 @@
         };
 
         SYS {
-            display-name = "System";
+            display-name = "sys";
             bindings = <
 &trans  &kp F1        &kp F2        &kp F3        &kp F4      &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10      &trans
 &trans  &kp F11       &kp F12       &trans        &trans      &studio_unlock    &trans  &trans  &trans  &trans  &trans       &trans
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &bootloader  &trans
                                     &trans        &trans      &trans            &trans  &trans  &trans
-            >;
-        };
-
-        EXTRA {
-            display-name = "extra";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &bootloader  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
