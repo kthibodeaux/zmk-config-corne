@@ -28,8 +28,6 @@
             label = "MY_SPACE";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&kp UNDER>;
-
-            tapping-term-ms = <100>;
         };
     };
 
@@ -51,7 +49,7 @@
 
             bindings = <
 &kp DELETE  &kp Q             &kp W           &kp F  &kp P               &kp G            &kp J    &kp L               &kp U      &kp Y            &kp SEMICOLON      &kp BACKSLASH
-&kp ESCAPE  &hm LEFT_SHIFT A  &hm LEFT_GUI R  &kp S  &hm LEFT_CONTROL T  &kp D            &kp H    &hm LEFT_CONTROL N  &kp E      &hm RIGHT_GUI R  &hm RIGHT_SHIFT O  &trans
+&kp ESCAPE  &hm LEFT_SHIFT A  &hm LEFT_GUI R  &kp S  &hm LEFT_CONTROL T  &kp D            &kp H    &hm LEFT_CONTROL N  &kp E      &hm RIGHT_GUI I  &hm RIGHT_SHIFT O  &trans
 &mo 3       &kp Z             &kp X           &kp C  &kp V               &kp B            &kp K    &kp M               &kp COMMA  &kp DOT          &kp FSLH           &trans
                                               &mo 1  &my_space           &kp BACKSPACE    &kp TAB  &kp ENTER           &mo 2
             >;
