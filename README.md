@@ -1,21 +1,14 @@
-# My shops https://keyboard-hoarders.com // https://keyboardhoarders.etsy.com
-# Now change the keymap using ZMK.studio 
-1. Go to zmk.studio
-2. plug in left half of the keyboard via USB to computer
-3. select USB once at zmk.studio
-4. this will open a list of connected devices. Find CorneWireless and connect
-5. Unlock keyboard by going to the last layer on your keyboard and use the zmk studio unlock key as shown in the keymap picture.
+# flashing zmk
 
+1. download the artifact from the github action
+2. make sure both halves are on for this the entire time
+3. plug in the left half of the keyboard and press the physical reset button twice. this will put it in bootloader mode and mount a directory
+4. copy `settings_reset-*` to the mounted directory
+5. unplug left half and plug in the right half and press the reset button twice
+6. copy the same settings file
+7. unplug the right half and plug in the left half again and press the reset button twice
+8. copy `*_left_nice_view_adapter*.uf2` to the mounted directory
+9. unplug and plug in the right half and press the reset button twice
+10. copy `*_right_nice_view_adapter*.uf2` to the mounted directory
 
-![IMG_0446](https://github.com/user-attachments/assets/1f24f8bd-588f-4f2e-bc61-a1301dc8450f)
-
-Want an easy way to customize the keymap?  I have a guide https://www.keyboardhoarders.com/post/1288093071901/zmk-change-keymap-walkthrough
-
-
-![zmkmy_keymap (7)](https://github.com/user-attachments/assets/23712dff-27b2-407d-b222-d315543dbef9)
-
-
-
-How to switch bluetooth devices.
-
-![bluetoothpair-guide](https://github.com/user-attachments/assets/d777bf4e-a7e3-4429-8638-2b11e7558153)
+[source](https://keyboard-hoarders.com/pages/guides-1)
