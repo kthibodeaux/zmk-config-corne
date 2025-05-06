@@ -13,11 +13,14 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_press &kp LEFT_CONTROL>,
-                <&macro_tap &kp B>,
-                <&macro_release &kp LEFT_CONTROL>,
-                <&macro_param_1to1 &macro_tap &kp MACRO_PLACEHOLDER>
-                ;
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp B>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL &macro_param_1to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>;
         };
     };
 };
@@ -65,30 +68,30 @@
         DEF {
             display-name = "base";
             bindings = <
-&kp DELETE  &kp Q             &kp W           &kp F  &kp P               &kp G            &kp J    &kp L               &kp U            &kp Y            &kp SEMICOLON      &kp BACKSLASH
-&kp ESCAPE  &hm LEFT_SHIFT A  &hm LEFT_GUI R  &kp S  &hm LEFT_CONTROL T  &kp D            &kp H    &hm LEFT_CONTROL N  &tmux_layer 4 E  &hm RIGHT_GUI I  &hm RIGHT_SHIFT O  &trans
-&trans      &kp Z             &kp X           &kp C  &kp V               &kp B            &kp K    &kp M               &kp COMMA        &kp DOT          &kp FSLH           &trans
-                                              &mo 1  &my_space           &kp BACKSPACE    &kp TAB  &kp ENTER           &mo 2
+&kp DELETE  &kp Q             &kp W           &kp F   &kp P               &kp G        &kp J      &kp L               &kp U            &kp Y            &kp SEMICOLON      &kp BACKSLASH
+&kp ESCAPE  &hm LEFT_SHIFT A  &hm LEFT_GUI R  &kp S   &hm LEFT_CONTROL T  &kp D        &kp H      &hm LEFT_CONTROL N  &tmux_layer 4 E  &hm RIGHT_GUI I  &hm RIGHT_SHIFT O  &trans
+&trans      &kp Z             &kp X           &kp C   &kp V               &kp B        &kp K      &kp M               &kp COMMA        &kp DOT          &kp FSLH           &trans
+                                              &trans  &lt 1 BACKSPACE     &my_space    &kp ENTER  &lt 2 TAB           &trans
             >;
         };
 
         NAV {
             display-name = "num";
             bindings = <
-&trans  &kp LG(NUMBER_1)      &kp LG(N2)            &kp LG(N3)            &kp LG(N4)            &kp LG(N5)        &kp LG(N6)            &kp LG(N7)            &kp LG(N8)            &kp LG(N9)            &kp LG(N0)            &trans
-&trans  &kp N1                &kp N2                &kp N3                &kp N4                &kp N5            &kp N6                &kp N7                &kp N8                &kp N9                &kp N0                &trans
-&trans  &kp LG(LC(N1))        &kp LG(LC(N2))        &kp LG(LC(N3))        &kp LG(LC(N4))        &kp LG(LC(N5))    &kp LG(LC(N6))        &kp LG(LC(N7))        &kp LG(LC(N8))        &kp LG(LC(N9))        &kp LG(LC(N0))        &trans
-                                                    &trans                &trans                &trans            &kp DOWN_ARROW        &kp UP_ARROW          &trans
+&trans  &kp LG(NUMBER_1)  &kp LG(N2)      &kp LG(N3)      &kp LG(N4)      &kp LG(N5)        &kp LG(N6)      &kp LG(N7)      &kp LG(N8)      &kp LG(N9)      &kp LG(N0)      &trans
+&trans  &kp N1            &kp N2          &kp N3          &kp N4          &kp N5            &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &trans
+&trans  &kp LG(LC(N1))    &kp LG(LC(N2))  &kp LG(LC(N3))  &kp LG(LC(N4))  &kp LG(LC(N5))    &kp LG(LC(N6))  &kp LG(LC(N7))  &kp LG(LC(N8))  &kp LG(LC(N9))  &kp LG(LC(N0))  &trans
+                                          &trans          &trans          &trans            &kp DOWN_ARROW  &kp UP_ARROW    &trans
             >;
         };
 
         SYM {
             display-name = "sym";
             bindings = <
-&trans  &trans         &kp TILDE    &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp DOLLAR         &kp EXCL  &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp ASTRK  &trans   &kp K_MUTE
-&trans  &kp AMPERSAND  &kp PIPE     &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp GRAVE          &trans    &kp COLON            &kp AT                &kp MINUS  &kp HASH &kp C_VOLUME_UP
-&trans  &trans         &kp PERCENT  &kp PLUS          &kp EQUAL          &kp CARET          &trans    &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &trans     &trans   &kp C_VOL_DN
-                                    &trans            &kp LEFT_ARROW     &kp RIGHT_ARROW    &trans    &trans               &trans
+&trans  &trans         &kp TILDE    &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp DOLLAR         &kp EXCL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTRK  &trans    &kp K_MUTE
+&trans  &kp AMPERSAND  &kp PIPE     &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp GRAVE          &trans    &kp COLON             &kp AT                 &kp MINUS  &kp HASH  &kp C_VOLUME_UP
+&trans  &trans         &kp PERCENT  &kp PLUS          &kp EQUAL          &kp CARET          &trans    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans     &trans    &kp C_VOL_DN
+                                    &trans            &kp LEFT_ARROW     &kp RIGHT_ARROW    &trans    &trans                &trans
             >;
         };
 
@@ -104,10 +107,10 @@
 
         tmux {
             bindings = <
-&trans  &trans      &trans      &trans      &tmux_do LS(V) &tmux_do LS(S) &trans     &trans                &trans  &trans            &trans                  &trans
-&trans  &tmux_do N1 &tmux_do N2 &tmux_do N3 &tmux_do N4    &tmux_do N5    &trans     &tmux_do LEFT_BRACKET &trans  &tmux_do PERCENT  &tmux_do DOUBLE_QUOTES  &trans
-&trans  &tmux_do N6 &tmux_do N7 &tmux_do N8 &kp LC(LA(V))  &tmux_do LS(B) &trans     &trans                &trans  &trans            &trans                  &trans
-                                &trans      &tmux_do C     &tmux_do Z     &tmux_do Y &tmux_do LS(F)        &trans
+&trans  &trans       &trans       &trans       &tmux_do LS(V)  &tmux_do LS(S)    &trans      &trans                 &trans  &trans            &trans                  &trans
+&trans  &tmux_do N1  &tmux_do N2  &tmux_do N3  &tmux_do N4     &tmux_do N5       &trans      &tmux_do LEFT_BRACKET  &trans  &tmux_do PERCENT  &tmux_do DOUBLE_QUOTES  &trans
+&trans  &tmux_do N6  &tmux_do N7  &tmux_do N8  &kp LC(LA(V))   &tmux_do LS(B)    &trans      &trans                 &trans  &trans            &trans                  &trans
+                                  &trans       &tmux_do C      &tmux_do Z        &tmux_do Y  &tmux_do LS(F)         &trans
             >;
 
             label = "tmux";
