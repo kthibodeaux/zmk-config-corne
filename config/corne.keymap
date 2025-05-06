@@ -68,10 +68,10 @@
         DEF {
             display-name = "base";
             bindings = <
-&kp DELETE  &kp Q             &kp W           &kp F   &kp P               &kp G        &kp J      &kp L               &kp U            &kp Y            &kp SEMICOLON      &kp BACKSLASH
-&kp ESCAPE  &hm LEFT_SHIFT A  &hm LEFT_GUI R  &kp S   &hm LEFT_CONTROL T  &kp D        &kp H      &hm LEFT_CONTROL N  &tmux_layer 4 E  &hm RIGHT_GUI I  &hm RIGHT_SHIFT O  &trans
-&trans      &kp Z             &kp X           &kp C   &kp V               &kp B        &kp K      &kp M               &kp COMMA        &kp DOT          &kp FSLH           &trans
-                                              &trans  &lt 1 BACKSPACE     &my_space    &kp ENTER  &lt 2 TAB           &trans
+&trans  &kp Q             &kp W           &kp F       &kp P               &kp G        &kp J      &kp L               &kp U            &kp Y            &kp SEMICOLON      &trans
+&trans  &hm LEFT_SHIFT A  &hm LEFT_GUI R  &kp S       &hm LEFT_CONTROL T  &kp D        &kp H      &hm LEFT_CONTROL N  &tmux_layer 4 E  &hm RIGHT_GUI I  &hm RIGHT_SHIFT O  &trans
+&trans  &kp Z             &kp X           &kp C       &kp V               &kp B        &kp K      &kp M               &kp COMMA        &kp DOT          &kp FSLH           &trans
+                                          &kp DELETE  &lt 1 BACKSPACE     &my_space    &kp ENTER  &lt 2 TAB           &kp ESCAPE
             >;
         };
 
@@ -88,9 +88,9 @@
         SYM {
             display-name = "sym";
             bindings = <
-&trans  &trans         &kp TILDE    &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp DOLLAR         &kp EXCL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTRK  &trans    &kp K_MUTE
-&trans  &kp AMPERSAND  &kp PIPE     &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp GRAVE          &trans    &kp COLON             &kp AT                 &kp MINUS  &kp HASH  &kp C_VOLUME_UP
-&trans  &trans         &kp PERCENT  &kp PLUS          &kp EQUAL          &kp CARET          &trans    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans     &trans    &kp C_VOL_DN
+&trans  &trans         &kp TILDE    &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp DOLLAR         &kp EXCL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTRK  &kp BACKSLASH  &kp K_MUTE
+&trans  &kp AMPERSAND  &kp PIPE     &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp GRAVE          &trans    &kp COLON             &kp AT                 &kp MINUS  &kp HASH       &kp C_VOLUME_UP
+&trans  &trans         &kp PERCENT  &kp PLUS          &kp EQUAL          &kp CARET          &trans    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans     &trans         &kp C_VOL_DN
                                     &trans            &kp LEFT_ARROW     &kp RIGHT_ARROW    &trans    &trans                &trans
             >;
         };
