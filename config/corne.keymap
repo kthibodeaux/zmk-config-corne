@@ -34,6 +34,18 @@
                 <&macro_tap>,
                 <&kp MACRO_PLACEHOLDER>;
         };
+
+        e_thmup: e_thmup {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp COLON &kp PLUS &kp N1 &kp COLON>;
+        };
+
+        e_joy: e_joy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp COLON &kp J &kp O &kp Y &kp COLON>;
+        };
     };
 };
 
@@ -79,8 +91,8 @@
             display-name = "base";
             bindings = <
 &kp DELETE &kp Q             &kp W          &kp F           &kp P               &kp G              &kp J     &kp L              &kp U            &kp Y            &kp SEMICOLON      &trans
-&kp ESCAPE &hm LEFT_SHIFT A  &hm LEFT_GUI R &kp S           &hm LEFT_CONTROL T  &kp D              &kp H     &hm LEFT_CONTROL N &tmux_layer 4 E  &hm RIGHT_GUI I  &hm RIGHT_SHIFT O  &trans
-&trans     &kp Z             &kp X          &kp C           &kp V               &kp B              &kp K     &kp M              &kp COMMA        &kp DOT          &kp FSLH           &trans
+&kp ESCAPE &hm LEFT_SHIFT A  &hm LEFT_GUI R &kp S           &hm LEFT_CONTROL T  &kp D              &kp H     &hm LEFT_CONTROL N &tmux_layer 4 E  &hm RIGHT_GUI I  &hm RIGHT_SHIFT O  &e_joy
+&trans     &kp Z             &kp X          &kp C           &kp V               &kp B              &kp K     &kp M              &kp COMMA        &kp DOT          &kp FSLH           &e_thmup
                                             &lt 1 BACKSPACE &my_space           &lt 1 BACKSPACE    &lt 2 TAB &kp ENTER          &lt 2 TAB
             >;
         };
