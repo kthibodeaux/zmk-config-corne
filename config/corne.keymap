@@ -94,7 +94,7 @@
 &kp DELETE &kp Q             &kp W          &kp F           &kp P               &kp G              &kp J     &kp L              &kp U            &kp Y            &kp SEMICOLON      &trans
 &kp ESCAPE &hm LEFT_SHIFT A  &hm LEFT_GUI R &kp S           &hm LEFT_CONTROL T  &kp D              &kp H     &hm LEFT_CONTROL N &tmux_layer 4 E  &hm RIGHT_GUI I  &hm RIGHT_SHIFT O  &e_joy
 &trans     &kp Z             &kp X          &kp C           &kp V               &kp B              &kp K     &kp M              &kp COMMA        &kp DOT          &kp FSLH           &e_thmup
-                                            &lt 1 BACKSPACE &my_space           &lt 1 BACKSPACE    &lt 2 TAB &kp ENTER          &lt 2 TAB
+                                            &mo NAV         &my_space           &kp BACKSPACE      &kp TAB   &kp ENTER          &mo SYM
             >;
         };
 
