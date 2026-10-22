@@ -125,7 +125,6 @@ flash() {
 }
 
 bold "plug in both halves and make sure both are switched on."
-read -rp "press enter when ready... " _
 
 if (( reset )); then
     flash left "$settings_fw" 1 4
