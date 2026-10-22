@@ -12,6 +12,10 @@ firmware is written to `firmware/`. the build runs in the `zmkfirmware/zmk-build
 
 # flashing zmk
 
+`./flash.sh` walks through the steps below using the firmware already in `firmware/` (it does not build). it prompts for each reset, mounts the bootloader drive, copies the right file and waits for the half to reboot. `./flash.sh --no-reset` skips the settings reset.
+
+to do it by hand:
+
 1. build the firmware (see above)
 2. make sure both halves are on for this the entire time
 3. plug in the left half of the keyboard and press the physical reset button twice. this will put it in bootloader mode and mount a directory
