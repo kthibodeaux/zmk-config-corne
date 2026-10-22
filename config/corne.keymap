@@ -23,17 +23,6 @@
                 <&kp MACRO_PLACEHOLDER>;
         };
 
-        kvm: kvm {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_tap>,
-                <&kp LEFT_CONTROL &kp LEFT_CONTROL>,
-                <&macro_param_1to1>,
-                <&macro_tap>,
-                <&kp MACRO_PLACEHOLDER>;
-        };
-
         e_thmup: e_thmup {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -122,7 +111,7 @@
             display-name = "sys";
             bindings = <
 &trans  &kp F1        &kp F2        &kp F3        &kp F4      &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10      &trans
-&trans  &kp F11       &kp F12       &trans        &trans      &studio_unlock    &trans  &kvm N1 &kvm N2 &kvm N3 &kvm N4      &trans
+&trans  &kp F11       &kp F12       &trans        &trans      &studio_unlock    &trans  &trans  &trans  &trans  &trans       &trans
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &bootloader  &trans
                                     &trans        &trans      &trans            &trans  &trans  &trans
             >;
