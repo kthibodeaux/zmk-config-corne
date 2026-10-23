@@ -4,6 +4,7 @@
 #
 #   ./flash.sh                 settings reset on both halves, then firmware
 #   ./flash.sh --no-reset      skip the settings reset, only flash firmware
+#   ./flash.sh --keymap-only   only flash the left half (the keymap lives there)
 #
 # Plug both halves in and keep them on. For each step the script tells you which
 # half to put into the bootloader (double-tap its reset button), waits for the
@@ -17,11 +18,12 @@ FW_DIR="$REPO_DIR/firmware"
 LABEL="NICENANO"
 DEV_LINK="/dev/disk/by-label/$LABEL"
 
-reset=1
+mode=full
 for arg in "$@"; do
     case "$arg" in
-        --no-reset) reset=0 ;;
-        -h|--help) sed -n '3,11p' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
+        --no-reset) mode=no-reset ;;
+        --keymap-only) mode=keymap-only ;;
+        -h|--help) sed -n '3,12p' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
         *) echo "unknown option: $arg" >&2; exit 1 ;;
     esac
 done
@@ -126,15 +128,21 @@ flash() {
 
 bold "plug in both halves and make sure both are switched on."
 
-if (( reset )); then
-    flash left "$settings_fw" 1 4
-    flash right "$settings_fw" 2 4
-    flash left "$left_fw" 3 4
-    flash right "$right_fw" 4 4
-else
-    flash left "$left_fw" 1 2
-    flash right "$right_fw" 2 2
-fi
+case "$mode" in
+    full)
+        flash left "$settings_fw" 1 4
+        flash right "$settings_fw" 2 4
+        flash left "$left_fw" 3 4
+        flash right "$right_fw" 4 4
+        ;;
+    no-reset)
+        flash left "$left_fw" 1 2
+        flash right "$right_fw" 2 2
+        ;;
+    keymap-only)
+        flash left "$left_fw" 1 1
+        ;;
+esac
 
 echo
 bold "all done. the halves should pair with each other within a few seconds."

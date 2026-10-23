@@ -12,7 +12,7 @@ firmware is written to `firmware/`. the build runs in the `zmkfirmware/zmk-build
 
 # flashing zmk
 
-`./flash.sh` walks through the steps below using the firmware already in `firmware/` (it does not build). it prompts for each reset, mounts the bootloader drive, copies the right file and waits for the half to reboot. `./flash.sh --no-reset` skips the settings reset.
+`./flash.sh` walks through the steps below using the firmware already in `firmware/` (it does not build). it prompts for each reset, mounts the bootloader drive, copies the right file and waits for the half to reboot. `./flash.sh --no-reset` skips the settings reset, and `./flash.sh --keymap-only` only flashes the left half, which is all a keymap change needs.
 
 to do it by hand:
 
