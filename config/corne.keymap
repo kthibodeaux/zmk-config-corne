@@ -72,7 +72,15 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        combo_tab {
+            bindings = <&kp TAB>;
+            key-positions = <38 39>;
+            timeout-ms = <35>;
+        };
+    };
 
     //
 
@@ -83,9 +91,9 @@
             display-name = "base";
             bindings = <
 &kp DELETE &kp Q             &kp W          &kp F           &kp P               &kp G              &kp J     &kp L              &kp U            &kp Y            &kp SEMICOLON      &trans
-&kp ESCAPE &hm LEFT_SHIFT A  &hm LEFT_GUI R &kp S           &hm LEFT_CONTROL T  &kp D              &kp H     &hm LEFT_CONTROL N &tmux_layer 4 E  &hm RIGHT_GUI I  &hm RIGHT_SHIFT O  &e_joy
+&trans     &hm LEFT_SHIFT A  &hm LEFT_GUI R &kp S           &hm LEFT_CONTROL T  &kp D              &kp H     &hm LEFT_CONTROL N &tmux_layer 4 E  &hm RIGHT_GUI I  &hm RIGHT_SHIFT O  &e_joy
 &trans     &kp Z             &kp X          &kp C           &kp V               &kp B              &kp K     &kp M              &kp COMMA        &kp DOT          &kp FSLH           &e_thmup
-                                            &mo NAV         &my_space           &kp BACKSPACE      &kp TAB   &kp ENTER          &mo SYM
+                                            &mo NAV         &my_space           &kp BACKSPACE      &kp ESCAPE &kp ENTER          &mo SYM
             >;
         };
 
